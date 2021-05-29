@@ -33,18 +33,18 @@ for line in sys.stdin:
     # strip removes whitespaces and new lines at the beginning and end of the line
     # the result is a tuple with 6 elements
     data = line.strip().split("\t")
-    # store the 6 elements of the tuple in seperate variables
-    date, time, item, category, sales, payment = data
 
+    if len(data) != 6:
+        raise Exception(' Error!! The tuple does not contain 6 elements')
+
+    else:
+
+    # store the 6 elements of the tuple in seperate variables
+        date, time, item, category, sales, payment = data
+
+        if category == 'Computers' or category == 'Cameras' or category == 'Video Games':    
     # Write the key-value combination to standard output (stdout)
     # Key is the payment, value is the sales     
     # With a tab (\t) between key and value
     # New line \n means new record
-if len(data)!=6:
-	raise ValueError("Error!! There are not 6 values")
-else:
-    cat=['Computers','Video Games','Cameras']
-    for p_category in cat:
-        if  category == p_category:
-
-          sys.stdout.write("{0}\t{1}\n".format(category, sales))
+            sys.stdout.write("{0}\t{1}\n".format(category, sales))
