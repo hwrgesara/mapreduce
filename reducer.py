@@ -21,6 +21,7 @@ import sys
 
 # Sum of all sales (values) is initialized with zero, we just started
 count_of_sales = 0
+sum_of_sales = 0
 
 # Previous key is initialized with None, we just started
 previous_key = None
@@ -45,8 +46,9 @@ for line in sys.stdin:
         # to the standart output (stdout)
         # Key and value are seperated by a tab (\t)
         # Line ends with new line (\n)
-        sys.stdout.write("{0}\t{1}\n".format(previous_key, count_of_sales))
+        sys.stdout.write("{0}\t{1}\n".format(previous_key, sum_of_sales))
         # Sum of sales starts again with 0
+        sum_of_sales = 0
         count_of_sales = 0
 
     # Add the value to the total sales
@@ -58,4 +60,4 @@ for line in sys.stdin:
     previous_key = key
 if count_of_sales > 114:
     # write the last result to stdout
-    sys.stdout.write("{0}\t{1}\n".format(previous_key, count_of_sales))
+    sys.stdout.write("{0}\t{1}\n".format(previous_key, sum_of_sales/count_of_sales))
