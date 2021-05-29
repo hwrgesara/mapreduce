@@ -56,6 +56,6 @@ for line in sys.stdin:
     count_of_sales += 1
     # the previous key for the next iteration is the current key of the this iteration 
     previous_key = key
-
-# write the last result to stdout
-sys.stdout.write("{0}\t{1}\n".format(previous_key, count_of_sales))
+if count_of_sales > 114:
+    # write the last result to stdout
+    sys.stdout.write("{0}\t{1}\n".format(previous_key, count_of_sales))
