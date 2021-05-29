@@ -38,7 +38,7 @@ for line in sys.stdin:
     else:
         date, time, item, category, sales, payment = data
 
-    if (category in ("Computers", "Cameras", "Video Games")):
+    if (category in ('Computers', 'Cameras', 'Video Games')):
         # Write the key-value combination to standard output (stdout)
         # Key is the payment, value is the sales     
         # Key is the payment, value is the sales
