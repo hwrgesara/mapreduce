@@ -43,7 +43,8 @@ for line in sys.stdin:
 if len(data)!=6:
 	raise ValueError("Error!! There are not 6 values")
 else:
-    
-    for p_category in ['Computers','Video Games','Cameras']:
+    cat=['Computers','Video Games','Cameras']
+    for p_category in cat:
         if  category == p_category:
-            sys.stdout.write("{0}\t{1}\n".format(category, sales))
+
+          sys.stdout.write("{0}\t{1}\n".format(category, sales))
