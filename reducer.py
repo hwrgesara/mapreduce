@@ -58,4 +58,6 @@ for line in sys.stdin:
     previous_key = key
 
 # write the last result to stdout
-sys.stdout.write("{0}\t{1}\n".format(previous_key, count_of_sales))
+for line in sys.stdin:
+    if count_of_sales > 114:
+        sys.stdout.write("{0}\t{1}\n".format(previous_key, count_of_sales))
