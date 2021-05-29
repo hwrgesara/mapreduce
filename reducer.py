@@ -56,7 +56,7 @@ for line in sys.stdin:
     # the float function transforms the value
     # to a float data type (like decimal)
     count_of_sales += 1
-    sum_of_sales += value
+    sum_of_sales += float(value)
     # the previous key for the next iteration is the current key of the this iteration 
     previous_key = key
 if count_of_sales > 114:
